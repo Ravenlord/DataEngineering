@@ -1,0 +1,30 @@
+
+R1(A,B,C,D) mit FD1 = {A -> B, B -> C,A -> D}
+a.
+Schlüsselkandidaten: {A}
+R1{_A_, B, C, D}
+b.
+1.NF: ja, weil atomar
+2.NF: ja, kein Attribut ist abhängig von einer Schlüsselkandidatenteilmenge.
+3.NF: nein, weil C von A über B transitiv abhängig ist
+BCNF: nein, weil nicht in 3.NF
+
+R2(A,B,C,D) mit FD2 = {AB -> C, B -> D}
+a.
+Schlüsselkandidaten: {A,B}
+R2{_A_, _B_, C, D}
+b.
+1.NF: ja, weil atomar
+2.NF: nein, weil D nur abhängig von Schlüsselkandidatenteilmenge.
+3.NF: nein, weil nicht in 2.NF
+BCNF: nein, weil nicht in 2.NF
+
+R3(A,B,C,D) mit FD3 = {AB -> C, AC -> D, AD -> B}
+a.
+Schlüsselkandidaten: {A,B,C,D}
+R3{_A_, _B_, _C_, _D_}
+b.
+1.NF: ja, weil atomar
+2.NF: ja, keine Nichtschlüsselattribute
+3.NF: ja, keine nichtschlüsselattribute
+BCNF: nein, keine Determinante ist Superschlüssel (Alle müssten es sein, um BCNF zu erfüllen).

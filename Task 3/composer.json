@@ -1,0 +1,6 @@
+{
+    "name": "mdeutschl/de",
+    "require": {
+        "fennb/phirehose": "dev-master"
+    }
+}

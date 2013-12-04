@@ -1,0 +1,14 @@
+; Please supply all necessary configuration options here.
+; When you are done, rename this file to "crawler.ini".
+
+; The consumer key for the registered Twitter app.
+consumer_key    = 
+
+; The consumer secret for the registered Twitter app.
+consumer_secret = 
+
+; The OAuth token for the Twitter account to be used.
+oauth_token     = 
+
+; The OAuth secret for the Twitter account to be used.
+oauth_secret    = 

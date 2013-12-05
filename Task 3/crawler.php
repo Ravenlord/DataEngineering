@@ -21,7 +21,7 @@ class TweetCrawler extends OauthPhirehose {
   private $tweets = [];
 
 
-  public function __construct($username, $password, $method = Phirehose::METHOD_SAMPLE, $format = self::FORMAT_JSON, $lang = false, $db = "test", $collection = "tweets", $maxTweets = 10000, $batchSize = 1000) {
+  public function __construct($username, $password, $method = Phirehose::METHOD_SAMPLE, $format = self::FORMAT_JSON, $lang = false, $db = "test", $collection = "tweets", $maxTweets = 100000, $batchSize = 1000) {
     parent::__construct($username, $password, $method, $format, $lang);
     $this->maxTweets = $maxTweets;
     $this->batchSize = $batchSize;
@@ -33,7 +33,7 @@ class TweetCrawler extends OauthPhirehose {
     if (!empty($this->tweets) && $this->tweetCount % $this->batchSize === 0 ) {
       $this->collection->batchInsert($this->tweets, [ "continueOnError" => true ]);
       $this->tweets = [];
-      $this->log("Flushed {$this->batchSize} tweets to the database!");
+      $this->log("Flushed {$this->tweetCount} of {$this->maxTweets} tweets to the database!");
     }
 
     // If we have gathered enough tweets, flush the last tweets to the database and exit.

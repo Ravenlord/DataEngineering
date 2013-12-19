@@ -14,3 +14,6 @@
 11. Enjoy the chart in your browser ;)
 
 **Note:** If you use different collection names than supplied in the example, please be sure to double check the collection used in the index.php file.
+
+# Result
+A screenshot of the resulting mood map is also provided here named `mood-chart.png`.

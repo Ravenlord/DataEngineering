@@ -17,4 +17,4 @@
 
 # Result
 A screenshot of the resulting mood map is also provided here. 
-![https://raw.github.com/Ravenlord/DataEngineering/master/Task%203/mood-chart.png]
+![Mood Chart](https://raw.github.com/Ravenlord/DataEngineering/master/Task%203/mood-chart.png)
